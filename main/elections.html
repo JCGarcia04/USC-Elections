@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title> HAU-USC Elections </title>
+        <link rel = "stylesheet" href = "assets/elections.css">
+        <link rel = "icon" type = "image/x-icon" href = "https://instructure-uploads-apse1.s3.ap-southeast-1.amazonaws.com/account_157760000000000001/attachments/8318568/imgonline-com-ua-resize-TQk7J18uPZz.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <script src = "assets/elections.js"></script>
+    </head>
+    <body>
+        <!-- Voting Page -->
+         <div class = "content-header">
+            <h1> Student Council Elections </h1>
+         </div>
+         <section id = "content-banner">
+            <div class = "content">
+                <form action = "elections.php" method = "POST" onsubmit = "return validateForm()">
+                    <!-- Position Candidate -->
+                    <div class = "position-header"><i class = "fas fa-user"></i> President</div>
+                     <!-- Candidate 1 -->
+                    <div class = "candidate-card"> <!-- Copy starts from here -->
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "president[]" value = "Jun Nathan Galang Santos"><!--Change name and value as intended.-->
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> Jun Nathan Galang Santos </strong>
+                            <div>
+                                <label> Nickname: </label> <span> Jun </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> Overthinkers </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> School of Computing </span>
+                            </div>
+                        </div>
+                    </div> <!-- Copy ends here to add more candidates in the intended position-->
+
+                    <!-- Candidate 2 -->
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "president[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add candidates as necessary -->
+                    <br /> <!-- Space for Different Position -->
+                    <!-- New Position -->
+                    <div class = "position-header"><i class = "fas fa-user"></i> Vice President Internal </div>
+                    <div class = "candidate-card"> 
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "vpinternal[]" name = "Joshua Andrei Dimalanta Sablan">
+                        </div>
+                        <div class  = "image-container">
+                            <img class  = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <div>
+                                <strong> Joshua Andrei Dimalanta Sablan </strong>
+                            </div>
+                            <div>
+                                <label> Nickname: </label> <span> Joshie </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> "HUH" </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> School of Computing </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "vpinternal[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "vpinternal[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "vpinternal[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add candidates as necessary -->
+                    <br />
+                    <!-- New Position -->
+                    <div class = "position-header"><i class = "fas fa-user"></i> Vice President External </div>
+                    <div class = "candidate-card"> 
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "vpexternal[]" name = "David Andre Terrado Ramos">
+                        </div>
+                        <div class  = "image-container">
+                            <img class  = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <div>
+                                <strong> David Andre Terrado Ramos </strong>
+                            </div>
+                            <div>
+                                <label> Nickname: </label> <span> Dave </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> Schizo </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> School of Computing </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "vpexternal[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "vpexternal[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "vpexternal[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class = "position-header"><i class = "fas fa-user"></i> Secretary </div>
+                    <div class = "candidate-card"> 
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "secretary[]" name = "John Clarenz Catli Garcia">
+                        </div>
+                        <div class  = "image-container">
+                            <img class  = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <div>
+                                <strong> John Clarenz Catli Garcia </strong>
+                            </div>
+                            <div>
+                                <label> Nickname: </label> <span> JC </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> Chixer (kahit di nmn) </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> School of Computing </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "secretary[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "secretary[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "candidate-card">
+                        <div class = "checkbox-container">
+                            <input type = "checkbox" name = "secretary[]" value = "[INSERT CANDIDATE NAME]">
+                        </div>
+                        <div class = "image-container">
+                            <img class = "candidate-image" src = "CANDIDATE_IMG" alt = "Candidate Image">
+                        </div>
+                        <div class = "info-container">
+                            <strong> [INSERT NAME] </strong>
+                            <div>
+                                <label> Nickname: </label> <span> [INSERT NICKNAME] </span>
+                            </div>
+                            <div>
+                                <label> Partylist: </label> <span> [INSERT PARTYLIST] </span>
+                            </div>
+                            <div>
+                                <label> Department: </label> <span> [INSERT DEPARTMENT] </span>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <!-- Submit Button -->
+                    <input type = "submit" value = "Verify Selection(s)" class = "verify-button">
+                </form>
+            </div>
+         </section>
+    </body>
+</html>

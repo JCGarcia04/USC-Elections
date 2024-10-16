@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* verify Page */
+.content-header {
+    width: 100%;
+    height: 80px;
+    background: maroon;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.content-header h1 {
+    font-size: 32px;
+}
+
+#content-banner {
+    width: 100%;
+    height: auto;
+    background: white;
+    justify-content: center;
+    display: flex;
+}
+
+.content {
+    width: 50%;
+    height: auto;
+    top: 10vh;
+    position: absolute;
+    background-color: rgba(255, 255 , 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.candidate-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white; 
+    position: relative;
+}
+
+.checkbox-container {
+    align-self: center; /* Center the checkbox vertically */
+    padding: 10px; /* Padding for inner spacing */
+    margin: 20px;
+}
+
+.image-container {
+    height: auto;
+    align-self: center;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.candidate-image {
+    width: 100%;
+    height: 100%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column; /* Stack details vertically */
+    align-self: center; /* Center details vertically */
+    text-align: left; /* Align text to the left */
+    padding: 10px; /* Padding for inner spacing */
+}
+
+.position-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; /* Reset margin */
+    padding: 10px; /* Add padding for spacing */
+    background-color: #f8f9fa; /* Light background for the header */
+    border-top-left-radius: 5px; /* Round top corners */
+    border-top-right-radius: 5px; /* Round top corners */
+    border: 1px solid black; /* Border to separate from card content */
+    border-bottom: none;
+    text-align: left;
+}
+
+.info-container label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between labels */
+}
+
+.verify-button {
+    width: 20%;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    border: 2px solid black;
+    background: maroon;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s, color 0.5s;
+}
+
+.verify-button span {
+    height: auto;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: width ease 0.5s;
+}
+
+.verify-button:hover span {
+    width: 100%;
+}
+
+.verify-button:hover {
+    font-weight: bold;
+    border: 2px solid maroon;
+    color: black;
+    background: white;
+}
+
+
