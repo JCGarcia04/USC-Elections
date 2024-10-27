@@ -5,12 +5,6 @@
         $user_id = $_POST['user_id'];
         $password = $_POST['password'];
 
-       // Validate User ID format
-        if (!preg_match('/^\d{8}$/', $user_id)) {
-            echo "<script>alert('User ID is not valid. Please enter an 8-digit number.');</script>";
-            exit();
-        }
-
         // Connect Database
         $host = "localhost";
         $dbusername = "root";
@@ -25,19 +19,19 @@
         
         // Prepare and bind the SQL statement to prevent SQL injection
         $stmt = $conn->prepare("SELECT id, password FROM login WHERE id = ?");
-        $stmt->bind_param("i", $user_id); 
-        $stmt->execute();
+        $stmt -> bind_param("i", $user_id); 
+        $stmt -> execute();
         $result = $stmt->get_result();
 
         // Initialize a flag to check login success
         $loginSuccess = false;
 
-        if ($result->num_rows == 1) {
-            $row = $result->fetch_assoc();
+        if ($result -> num_rows == 1) {
+            $row = $result -> fetch_assoc();
             $storedPassword = $row['password'];
 
             // Verify the password
-            if ($password === $storedPassword) { 
+            if (password_verify($password, $storedPassword)) { 
                 session_start();
                 $_SESSION['user_id'] = $row['id']; // Store user ID in session
                 $loginSuccess = true;
@@ -53,17 +47,16 @@
         }
 
         // Close the statement and connection
-        $stmt->close();
-        $conn->close();
+        $stmt -> close();
+        $conn -> close();
 
         // Redirect based on login success
         if ($loginSuccess) {
             header("Location: elections.html");
             exit();
         } else {
-            // Redirect to error if login failed
             header("Location: error.html");
             exit();
         }
     }
-?>
+?> 
