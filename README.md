@@ -3,7 +3,7 @@ The files in this repository is only for the front-end of the application and is
 Apache and MySQL was used in the Xampp Control Panel
 ----- DATABASE auth -----
 ----- TABLE NAME login -----
------ id INT(8) UNSIGNED NOT NULL AUTO_INCREMENT, password VARCHAR(255) NOTNULL, PRIMARY KEY (id) -----
+----- id INT(8) UNSIGNED NOT NULL AUTO_INCREMENT, password VARCHAR(255) NOT NULL, PRIMARY KEY (id) -----
 
 ----- DATABASE vote_db -----
 ----- TABLE NAME votes -----
